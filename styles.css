@@ -9,25 +9,32 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     background-color: black;
 }
 
 .item {
-    width: 400px;
-    height: 400px;
+    width: 100px;
+    height: 100px;
     background-color: blue;
-    animation: square-anim 1s linear infinite alternate;
+    animation: square-anim 4s linear infinite  ;
     animation-delay: 2s ;
-    box-shadow: 0 0 300px blue;
+    box-shadow: 0 0 100px blue;
 }
 
 @keyframes square-anim {
-    from{
-        transform: scale(1) rotate(90deg);
-    }to {
-        transform: rotatey(180deg) translateX(400px) scale(0.7) skew(45deg);
-        background-color: red;
-        box-shadow: 0 0 300px red;
-}
+     0% {
+        transform: translate(0,0);
+     }
+     25% {
+        transform: translate(400px,0);
+     }
+     50% {
+        transform: translate(400px,400px);
+     }
+     75% {
+        transform: translate(0,400px);
+     }
+     100% {
+        transform: translate(0,0);
+     }
 }
