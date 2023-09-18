@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.item {
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    animation: square-anim 1s linear infinite alternate;
+    animation-delay: 2s ;
+    box-shadow: 0 0 300px blue;
+}
+
+@keyframes square-anim {
+    from{
+        transform: scale(1) rotate(90deg);
+    }to {
+        transform: rotatey(180deg) translateX(400px) scale(0.7) skew(45deg);
+        background-color: red;
+        box-shadow: 0 0 300px red;
+}
+}
